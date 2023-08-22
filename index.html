@@ -6026,11 +6026,14 @@
 
 
 
-
                   <script>
                     const secondDoc = document.querySelector(".property-detail-doc");
-                    let EMD = 0;
+<!-- Place EMD value Bool or Amount.-->
+                  
+                    EMD = 0;
 
+                    const xVal = new Boolean(EMD);
+                    
 
 
                     const placeholder = `
@@ -6044,7 +6047,7 @@
                             <div _ngcontent-nup-c70="" class="row">
                               <div _ngcontent-nup-c70="" class="col-12 col-sm-12 col-md-5 col-lg-4">
                                 
-                                    <img _ngcontent-nup-c70="" src="" 
+                                    <img _ngcontent-nup-c70="" src="./restrict.png" 
                                       class="property-img2" style="object-fit: contain;"><!----><!----><!----></a>
                             
                               </div>
@@ -6062,7 +6065,7 @@
 
 
 
-                    if (EMD === 0) {
+                    if (EMD === 0 || EMD === false) {
                       secondDoc.innerHTML = placeholder;
 
                     }
