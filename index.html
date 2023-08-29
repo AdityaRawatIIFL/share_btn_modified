@@ -4416,9 +4416,7 @@
               </li><!---->
               <li _ngcontent-nup-c52="" class="nav-item dropdown language"><a _ngcontent-nup-c52=""
                   href="https://uat.iiflonehome.com/#" role="button" data-bs-toggle="dropdown"
-                  class="nav-link dropdown-toggle"><img _ngcontent-nup-c52=""
-                    src="./ONE HOME LOAN_files/image-1691477581434-631303-placeholder-image.png"><span
-                    _ngcontent-nup-c52="">Aditya Rawat</span></a>
+                  class="nav-link">Aditya Rawat</a>
                 <ul _ngcontent-nup-c52="" aria-labelledby="navbarDropdown" data-bs-popper="none"
                   class="dropdown-menu dropdown-rgt">
                   <li _ngcontent-nup-c52=""><a _ngcontent-nup-c52="" href="https://uat.iiflonehome.com/#/profile"
@@ -4442,8 +4440,7 @@
                 </ul>
               </li><!---->
               <li _ngcontent-nup-c52="" class="nav-item Menu"><a _ngcontent-nup-c52=""
-                  href="https://uat.iiflonehome.com/#offcanvasRightMenu" data-bs-toggle="offcanvas" class="nav-link"><i
-                    _ngcontent-nup-c52="" class="fa fa-navicon"></i></a></li>
+                  href="https://uat.iiflonehome.com/#offcanvasRightMenu" data-bs-toggle="offcanvas" class="nav-link"><i><img src="./hamburger.png"/ style="width: 15px;"></i></a></li>
             </ul>
           </div>
           <p class="url-copy"><span class="url-tick">✅</span>URL Copied to Clipbord!</p>
@@ -5030,95 +5027,113 @@
                 <div _ngcontent-nup-c70="" class="col-3 col-sm-5 col-md-4 col-lg-4 col-xl-3">
                   <ul _ngcontent-nup-c70=""
                     class="d-flex align-items-center list-inline list-start justify-content-end">
-                    
-                    <li _ngcontent-nup-c70=""><a _ngcontent-nup-c70="" href="javascript:void(0)"><i
-                          _ngcontent-nup-c70="" class="fa fa-heart"></i></a></li>
+
+                    <li _ngcontent-gqv-c70=""><a _ngcontent-gqv-c70="" href="javascript:void(0)">
+                        <img src="./favorite-heart-button.png" class="heart-img" id="heartimg"
+                          onclick="myFunction();" />
+                      </a></li>
+
+                    <style>
+
+                    </style>
+
+                    <script>
+                      function myFunction() {
+                        var img = document.getElementById('heartimg').src;
+                        if (img.indexOf('favorite-heart-button.png') != -1) {
+                          document.getElementById('heartimg').src = 'heart.png';
+                        }
+                        else {
+                          document.getElementById('heartimg').src = './favorite-heart-button.png';
+                        }
+
+                      }
+                    </script>
                     <!-------------------------------------------------task2--------------------------------------------------------------->
 
 
                     <li _ngcontent-nup-c70="" class="temp-li" title="​🇸​​🇭​​🇦​​🇷​​🇪​">
-       
-                      
+
+
                       <a class="img-temp copy-clipbord"><img src="./share-icon.png" class=" share-icon share-hover"
-                          (click)="copyClipbord()"/></a>
-                        <style>
-                          .share-hover{
-                            width:18px;
-                            transition: width 0.5s;
+                          (click)="copyClipbord()" /></a>
+                      <style>
+                        .share-hover {
+                          width: 18px;
+                          transition: width 0.5s;
 
-                          }
-                          
-                          .share-hover:hover{
-                            width:18.5px;
-                            z-index: 9;
-                          }
+                        }
 
-                        </style>
+                        .share-hover:hover {
+                          width: 18.5px;
+                          z-index: 9;
+                        }
+                      </style>
 
-                </li>
-                <script>
+                    </li>
+                    <script>
 
-                  const url = document.querySelector(".copy-clipbord");
-                  url.addEventListener("click", () => {
-
-
-                    const urldiv = document.querySelector(".url-copy");
-
-                    urldiv.style = "display:block"
-
-                    setTimeout(() => {
-                      console.log("Delayed for 1 second.");
-                      urldiv.style = "display:none"
-                    }, "2000");
-
-                  });
-
-                  let btn = document.querySelector(".copy-clipbord");
-                  let Title = document.getElementsByTagName("title")[0].innerHTML;
-                  let PageURL = window.location;
-                  btn.addEventListener("click", () => {
-                    if (navigator.share) {
-                      navigator.share({
-                        text: 'IIFL One Home ',
-                        url: PageURL,
-                        title: Title
-
-                      })
-                        .then(() => {
-                          console.log('Thanks For Sharing');
-                        })
-                        .catch((err) => console.error(err));
-                    }
-                    else {
-                      navigator.clipboard.writeText(window.location);
-                    }
-                  });
-
-                </script>
+                      const url = document.querySelector(".copy-clipbord");
+                      url.addEventListener("click", () => {
 
 
-                <!-------------------------------------------------task2--------------------------------------------------------------->
+                        const urldiv = document.querySelector(".url-copy");
 
-                <li _ngcontent-nup-c70=""><a _ngcontent-nup-c70="" href="javascript:void(0)" title="​🇲​​🇦​​🇵​"><img _ngcontent-nup-c70=""
-                      src="./ONE HOME LOAN_files/Map.png"></a></li>
-                </ul>
+                        urldiv.style = "display:block"
+
+                        setTimeout(() => {
+                          console.log("Delayed for 1 second.");
+                          urldiv.style = "display:none"
+                        }, "2000");
+
+                      });
+
+                      let btn = document.querySelector(".copy-clipbord");
+                      let Title = document.getElementsByTagName("title")[0].innerHTML;
+                      let PageURL = window.location;
+                      btn.addEventListener("click", () => {
+                        if (navigator.share) {
+                          navigator.share({
+                            text: 'IIFL One Home ',
+                            url: PageURL,
+                            title: Title
+
+                          })
+                            .then(() => {
+                              console.log('Thanks For Sharing');
+                            })
+                            .catch((err) => console.error(err));
+                        }
+                        else {
+                          navigator.clipboard.writeText(window.location);
+                        }
+                      });
+
+                    </script>
+
+
+                    <!-------------------------------------------------task2--------------------------------------------------------------->
+
+                    <li _ngcontent-nup-c70=""><a _ngcontent-nup-c70="" href="javascript:void(0)"
+                        title="​🇲​​🇦​​🇵​"><img _ngcontent-nup-c70="" src="./ONE HOME LOAN_files/Map.png"></a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-          <ul _ngcontent-nup-c70="" class="nav nav-tabs navtabs justify-content-between">
-            <li _ngcontent-nup-c70="" class="nav-item"><a _ngcontent-nup-c70="" id="#PropertyDetails"
-                href="javascript:void(0)" class="nav-link">Property Details</a></li>
-            <li _ngcontent-nup-c70="" class="nav-item"><a _ngcontent-nup-c70="" id="#AuctionDetails"
-                href="javascript:void(0)" class="nav-link">Auction Details</a></li><!---->
-            <li _ngcontent-nup-c70="" class="nav-item"><a _ngcontent-nup-c70="" id="#NearbyLocation"
-                href="javascript:void(0)" class="nav-link">Nearby Location</a></li>
-            <li _ngcontent-nup-c70="" class="nav-item"><a _ngcontent-nup-c70="" id="#Documents"
-                href="javascript:void(0)" class="nav-link">Documents</a></li>
-            <li _ngcontent-nup-c70="" class="nav-item"><a _ngcontent-nup-c70="" id="#OtherInfo"
-                href="javascript:void(0)" class="nav-link">Other Info</a></li>
-            <li _ngcontent-nup-c70="" class="nav-item"><a _ngcontent-nup-c70="" id="#RecommededProperties"
-                href="javascript:void(0)" class="nav-link"> Recommeded Properties </a></li>
-          </ul>
+            <ul _ngcontent-nup-c70="" class="nav nav-tabs navtabs justify-content-between">
+              <li _ngcontent-nup-c70="" class="nav-item"><a _ngcontent-nup-c70="" id="#PropertyDetails"
+                  href="javascript:void(0)" class="nav-link">Property Details</a></li>
+              <li _ngcontent-nup-c70="" class="nav-item"><a _ngcontent-nup-c70="" id="#AuctionDetails"
+                  href="javascript:void(0)" class="nav-link">Auction Details</a></li><!---->
+              <li _ngcontent-nup-c70="" class="nav-item"><a _ngcontent-nup-c70="" id="#NearbyLocation"
+                  href="javascript:void(0)" class="nav-link">Nearby Location</a></li>
+              <li _ngcontent-nup-c70="" class="nav-item"><a _ngcontent-nup-c70="" id="#Documents"
+                  href="javascript:void(0)" class="nav-link">Documents</a></li>
+              <li _ngcontent-nup-c70="" class="nav-item"><a _ngcontent-nup-c70="" id="#OtherInfo"
+                  href="javascript:void(0)" class="nav-link">Other Info</a></li>
+              <li _ngcontent-nup-c70="" class="nav-item"><a _ngcontent-nup-c70="" id="#RecommededProperties"
+                  href="javascript:void(0)" class="nav-link"> Recommeded Properties </a></li>
+            </ul>
           </div>
         </section>
         <div _ngcontent-nup-c70="" class="container">
@@ -5234,6 +5249,7 @@
                     <h5 _ngcontent-nup-c70="">Ready To Move</h5>
                   </li>
                 </ul>
+                <!--
                 <div _ngcontent-nup-c70="" class="border-white-box pt-0"></div>
                 <div _ngcontent-nup-c70="" id="PropertyDetails" class="border-white-box">
                   <div _ngcontent-nup-c70="" class="txt_dec">
@@ -5256,7 +5272,7 @@
                     </div>
                     <div _ngcontent-nup-c70="" class="col-6 col-sm-4 col-md-6 col-lg-4">
                       <div _ngcontent-nup-c70="" class="detail-info">
-                        <p _ngcontent-nup-c70="">Ownership: <span _ngcontent-nup-c70="">-</span></p>
+                        <p _ngcontent-nup-c70=""> <span _ngcontent-nup-c70=""></span></p>
                       </div>
                     </div>
                     <div _ngcontent-nup-c70="" class="col-12 col-sm-8 col-md-12 col-lg-12">
@@ -5269,6 +5285,84 @@
                     </div>
                   </div>
                 </div>
+
+
+                -->
+
+
+                <!--||||||||||||||||||||||||||||||||||||||||Read More||||||||||||||||||||||||||||||||||||||||||||-->
+
+                <div _ngcontent-nup-c70="" class="border-white-box pt-0"></div>
+                <div _ngcontent-nup-c70="" id="PropertyDetails" class="border-white-box">
+                  <div _ngcontent-nup-c70="" class="txt_dec">
+                    <h4 _ngcontent-nup-c70="">About Property</h4>
+                    <p _ngcontent-nup-c70="" style="white-space: break-spaces;">Flat No 202 On 2nd Floor, Area
+                      Admeasuring 364 Sq. Ft., Wing B6, Raunak City B6 CHS Ltd., Sector- II , Raunak City Road, Wadeghar
+                      Village , Next to Don Bosco School, Near Adharwadi Jail, Kalyan (W), Wardha, Maharashtra, India,
+                      421301</p>
+                  </div>
+
+                  <div _ngcontent-nup-c70="" class="row show-more-item" style="display: none">
+                    <div _ngcontent-nup-c70="" class="col-6 col-sm-4 col-md-6 col-lg-4">
+                      <div _ngcontent-nup-c70="" class="detail-info">
+                        <p _ngcontent-nup-c70="">Price/Sqft : <span _ngcontent-nup-c70="">₹7,601.65</span></p>
+                      </div>
+                    </div>
+                    <div _ngcontent-nup-c70="" class="col-6 col-sm-4 col-md-6 col-lg-4">
+                      <div _ngcontent-nup-c70="" class="detail-info">
+                        <p _ngcontent-nup-c70="">Parking : <span _ngcontent-nup-c70="">1 Covered, 1 Open</span></p>
+                      </div>
+                    </div>
+                    <div _ngcontent-nup-c70="" class="col-6 col-sm-4 col-md-6 col-lg-4">
+                      <div _ngcontent-nup-c70="" class="detail-info">
+                        <p _ngcontent-nup-c70=""> <span _ngcontent-nup-c70=""></span></p>
+                      </div>
+                    </div>
+                    <div _ngcontent-nup-c70="" class="col-12 col-sm-8 col-md-12 col-lg-12">
+                      <div _ngcontent-nup-c70="" class="detail-info">
+                        <p _ngcontent-nup-c70="">Address <span _ngcontent-nup-c70="">: Flat No 202 On 2nd Floor, Area
+                            Admeasuring 364 Sq. Ft., Wing B6, Raunak City B6 CHS Ltd., Sector- II , Raunak City Road,
+                            Wadeghar Village , Next to Don Bosco School, Near Adharwadi Jail, Kalyan (W), Wardha,
+                            Maharashtra, India, 421301</span></p>
+
+
+                      </div>
+                    </div>
+                  </div>
+                  <button class="mymoreBtn">Read more</button>
+
+                </div>
+
+                <script>
+
+                  let Button_More = document.querySelector(".mymoreBtn").innerText;
+
+
+                  jQuery(document).ready(function ($) {
+                    $(".mymoreBtn").click(function (e) {
+                      $(".show-more-item:hidden").fadeIn();
+                      if ($(".show-more-item:hidden").length < 1)
+                        $(this).fadeOut();
+
+                    })
+                  })
+
+
+                </script>
+
+                <style>
+                  .mymoreBtn {
+                    border-radius: 5px;
+                    background-color: #EF5713;
+                    color: white;
+                    border-color: #EF5713;
+                  }
+                </style>
+
+
+
+                <!--|||||||||||||||||||||||||||||||||||||||||||Read More|||||||||||||||||||||||||||||||||||||||||-->
+
                 <div _ngcontent-nup-c70="" class="border-white-box">
                   <h4 _ngcontent-nup-c70="">Amenities</h4>
                   <div _ngcontent-nup-c70="" class="row"><!----><!----><!----><!----><!----><!----><!---->
@@ -5412,7 +5506,7 @@
                       <div _ngcontent-nup-c70="" class="col-6 col-sm-6 col-md-4 col-lg-4">
                         <div _ngcontent-nup-c70="" class="detail-info">
                           <h6 _ngcontent-nup-c70="">EMD Last Submission Date</h6>
-                          <h5 _ngcontent-nup-c70="">03-Aug-23</h5>
+                          <h5 _ngcontent-nup-c70="">03-Aug-23, 5:00 PM</h5>
                         </div>
                       </div>
                     </div>
@@ -6028,12 +6122,12 @@
 
                   <script>
                     const secondDoc = document.querySelector(".property-detail-doc");
-<!-- Place EMD value Bool or Amount.-->
-                  
+                    <!-- Place EMD value Bool or Amount.-->
+
                     EMD = 0;
 
                     const xVal = new Boolean(EMD);
-                    
+
 
 
                     const placeholder = `
@@ -6118,18 +6212,21 @@
               </div>
               <div _ngcontent-nup-c70="" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
                 <div _ngcontent-nup-c70="" class="white-box">
-                  <h4 _ngcontent-nup-c70="" class="dropdown Enquire-drop price-drop" style="white-space: nowrap;" title = "Reserved Price">
-                    ₹27,67,000.00 <!----></h4><a _ngcontent-nup-c70=""
+                  <h4 _ngcontent-nup-c70="" class="dropdown Enquire-drop price-drop" style="white-space: nowrap;"
+                    title="Reserved Price">
+                    ₹27,67,000.00 <!---->
+                    <del _ngcontent-hhg-c70="" title="Crossed Market price"> ₹2,76,70,000.00 </del>
+                  </h4><a _ngcontent-nup-c70=""
                     href="https://uat.iiflonehome.com/#/bid/register/64cb6831e4ee09d9505e9b35?isEoi=true"
                     class="btn btn-warning btn-lg btn-block mb10">Expression of interest
                   </a><!----><!----><!----><!----><!----><!----><!---->
-                 
-                 
-                 
-                 
-                 
+
+
+
+
+
                   <!-----------------------------------------------------task 1------------------------------------------------------->
-<!--
+                  <!--
                   <p class="contact-info_btw">Mobile: <a href="tel:">18002672499</a></p>
                   <p class="contact-info_btw">mailto: <a href="mailto:care@iiflonehome.com">care@iiflonehome.com</a></p>
 
@@ -6154,73 +6251,66 @@
 
 
 
-                
-
-
-
-    <style>
-      
-
-      .btn-num{
-            border: none;
-            cursor: pointer;
-            appearance: none;
-            background-color: inherit;
-            transition: transform .7s ease-in-out;
-            margin-left: 10px;
-            padding:0px;
-            margin:0px;
-
-        }
-
-        .btn-num:hover {
-            transform: rotate(360deg);
-
-        }
-
-        .contact-phn-img{
-            width: 25px;
-            height: 25px;
-        }
-        .phn-style{
-          color: white;
-          letter-spacing: 4px;
-        }
-        .phn-style:hover {
-            color: rgb(255, 255, 255);
-        }
-
-        .contact-area{
-          background-color: #EF5713;  
-          border-radius: 5px;
-          padding: 5px;
-          border:1px solid #EF5713;
-          text-align: center;
-          
-        }
-
-        .contact-area:hover{
-          background-color: #f46d2f;  
-          text-align: center;
-        }
-    </style>
-
-
-
-    <div class="contact-area">
-
-        <i><b><button type="submit" class="btn-num"><a href="tel:" >
-                <img src="./contact_img.png"  alt="buttonpng" border="0" class="contact-phn-img" /></a>
-            </button> <a href="tel:18002672499" class="phn-style">18002672499</a></b></i>
-
-    </div>
 
 
 
 
+                  <style>
+                    .btn-num {
+                      border: none;
+                      cursor: pointer;
+                      appearance: none;
+                      background-color: inherit;
+                      transition: transform .7s ease-in-out;
+                      margin-left: 10px;
+                      padding: 0px;
+                      margin: 0px;
+
+                    }
+
+                    .btn-num:hover {
+                      transform: rotate(360deg);
+
+                    }
+
+                    .contact-phn-img {
+                      width: 25px;
+                      height: 25px;
+                    }
+
+                    .phn-style {
+                      color: white;
+                      font-variant-numeric: stacked-fractions;
+
+                    }
+
+                    .phn-style:hover {
+                      color: rgb(255, 255, 255);
+                    }
+
+                    .contact-area {
+                      background-color: #EF5713;
+                      border-radius: 5px;
+                      padding: 5px;
+                      border: 1px solid #EF5713;
+                      text-align: center;
+
+                    }
+
+                    .contact-area:hover {
+                      background-color: #f46d2f;
+                      text-align: center;
+                    }
+                  </style>
 
 
 
+                  <div class="contact-area">
+
+                    <button type="submit" class="btn-num"><a href="tel:">
+                        <img src="./contact_img.png" alt="buttonpng" border="0" class="contact-phn-img" /></a>
+                    </button> <a href="tel:18002672499" class="phn-style">1800 267 2499</a>
+                  </div>
 
                   <!-----------------------------------------------------task 1------------------------------------------------------->
                 </div>
